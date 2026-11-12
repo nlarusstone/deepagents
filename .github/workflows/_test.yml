@@ -31,10 +31,10 @@ jobs:
     name: "Python ${{ inputs.python-version }}"
     steps:
       - name: "📋 Checkout Code"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v5.1.0
 
       - name: "🐍 Set up Python ${{ inputs.python-version }} + UV"
-        uses: "./.github/actions/uv_setup"
+        uses: "$/.github/actions/uv_setup"
         id: setup-python
         with:
           python-version: ${{ inputs.python-version }}
